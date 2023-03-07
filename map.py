@@ -25,7 +25,6 @@ x_tuc = np.repeat(0, 1000)
 y_tuc = -0.99616762856204204472570620423053*z_tuc #for B (galactic latitude)
 x_tuc = -1.3819535514372218087543204143034*y_tuc  #for L (galactic longitude)
 
-
 #points for Sun to NGC 5139
 z_5139 = np.linspace(0, 5.2, num=1000)
 x_5139 = np.repeat(0, 1000)
