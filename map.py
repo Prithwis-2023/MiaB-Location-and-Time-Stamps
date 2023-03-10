@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import ndimage
 import math
+import pandas as pd
 
 fig = plt.figure()
 ax = plt.axes(projection='3d')
@@ -14,9 +15,11 @@ ax.w_xaxis.pane.fill = False
 ax.w_yaxis.pane.fill = False
 ax.w_zaxis.pane.fill = False
 '''
+data = pd.read_csv('Harris.csv')
 
-def plot_gc(ID, l, b, dist_Sun, trials):
-    z_coor = np.linspace(0, dist_Sun, num = trials)
+
+def plot_gc(ID, l, b, dist_Sun, points):
+    z_coor = np.linspace(0, dist_Sun, num = points)
     x_coor = np.repeat(0, 1000)
     y_coor = math.tan(b*(math.pi/180)) * z_coor #first converted to radians 
     x_coor = math.tan(l*(math.pi/180)) * y_coor #first converted to radians
@@ -28,12 +31,16 @@ z_galc = np.repeat(0, 1000)
 x_galc = np.repeat(0, 1000) 
 y_galc = np.linspace(start=0.0, stop=8.0, num=1000) 
 
-plot_gc(104, 305.89, -44.89, -4.5, 1000)  # 47 Tuc
-plot_gc(5139, 309.10, -14.97, -5.2, 1000) # NGC 5139
+ax.plot(x_galc, y_galc, z_galc, label=r'Sun to Gal. Center')
+
+plot_gc(104, 305.89, -44.89, -4.5, 1000)  # NGC 104 (47 Tucanae)
+plot_gc(5139, 309.10, -14.97, -5.2, 1000) # NGC 5139 (Omega Centauri)
 plot_gc(6441, 353.53, -5.01, -11.6, 1000) # NGC 6441
 plot_gc(6440, 7.73, 3.80, 8.5, 1000)      # NGC 6440 
+plot_gc(6402, 21.32, 14.81, 9.3, 1000)    # NGC 6402
+plot_gc(7089, 53.37, -35.77, -11.5, 1000) # NGC 7089
+plot_gc()
 
-ax.plot(x_galc, y_galc, z_galc, label=r'Sun to Gal. Center')
 
 ax.set_xlabel('X-Axis', c='black')
 ax.set_ylabel('Y-Axis', c='black')
