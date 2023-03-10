@@ -8,6 +8,7 @@ import pandas as pd
 fig = plt.figure()
 ax = plt.axes(projection='3d')
 
+
 fig.set_facecolor('black')
 ax.set_facecolor('black') 
 ax.grid(False) 
