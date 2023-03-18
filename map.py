@@ -21,14 +21,14 @@ def plot_gc(ID, l, b, dist_Sun, points):
     x_coor = np.repeat(0, 1000)
     y_coor = math.tan(b*(math.pi/180)) * z_coor #first converted to radians 
     x_coor = math.tan(l*(math.pi/180)) * y_coor #first converted to radians
-    ax.plot(x_coor, y_coor, z_coor, label = r'Sun to NGC {}'.format(ID))
+    ax.plot(x_coor, y_coor, z_coor, label = r'Sun to NGC {}'.format(ID), linewidth=2)
         
 # points for Sun to Galactic Center
 z_galc = np.repeat(0, 1000)
 x_galc = np.repeat(0, 1000) 
 y_galc = np.linspace(start=0.0, stop=8.0, num=1000) 
 
-ax.plot(x_galc, y_galc, z_galc, label=r'Sun to Gal. Center')
+ax.plot(x_galc, y_galc, z_galc, label=r'Sun to Gal. Center', linewidth=2)
 
 plot_gc(104, 305.89, -44.89, -4.5, 1000)  # NGC 104 (47 Tucanae)
 plot_gc(5139, 309.10, -14.97, -5.2, 1000) # NGC 5139 (Omega Centauri)
