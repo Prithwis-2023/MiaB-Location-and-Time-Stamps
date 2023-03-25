@@ -48,9 +48,6 @@ ax.set_zlabel('Z-Axis', c=color)
 plt.legend()
 plt.show()
 
-
-
-
 '''
 # points for Sun to 47 Tuc
 z_tuc = np.linspace(0, -4.5, num=1000)
