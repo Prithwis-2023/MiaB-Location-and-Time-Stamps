@@ -3,4 +3,5 @@ matplotlib
 pandas
 scipy
 python-math
-
+pandas
+astropy
