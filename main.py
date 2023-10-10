@@ -15,7 +15,7 @@ for header in df:
 print(len(df))
 print(headers)
 print("------------------------")
-for i in range(len(df)):
+for i in range(10):
     ls = []
     for header in headers:
         elements = df[header]
@@ -27,10 +27,7 @@ for i in range(len(df)):
     ls.insert(6, rsun_with_error[1])
     
     rgc_with_rv = ls[7].split(" ")
-    for ele in rgc_with_rv:
-        if ele == " ":
-            rgc_with_rv.remove(ele)
-            
+    rgc_with_rv2 = [ele for ele in rgc_with_rv if ele != '']
     ls.pop(7)
     ls.insert(7, rgc_with_rv[0])
     ls.insert(8, rgc_with_rv[1])
