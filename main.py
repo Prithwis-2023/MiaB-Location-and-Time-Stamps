@@ -12,9 +12,6 @@ headers = []
 for header in df:
     headers.append(header)
 
-print(len(df))
-print(headers)
-print("------------------------")
 for i in range(len(df)):
     ls = []
     for header in headers:
@@ -32,9 +29,12 @@ for i in range(len(df)):
     ls.insert(7, rgc_with_rv2[0])
     ls.insert(8, rgc_with_rv2[1])
     
-    #print(ls)
-    #print(len(ls))
-    #print("-----------------------")
+    mualpha = ls[10].split(" ")
+    mualpha2 = [ele for ele in mualpha if ele != '']
+    ls.pop(10)
+    ls.insert(10, mualpha2[0])
+    ls.insert(11, mualpha2[1])
+
     with open('timestamp_refined.csv', 'a') as f_object:
  
         # Pass this file object to csv.writer()
