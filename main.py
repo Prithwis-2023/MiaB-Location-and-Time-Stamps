@@ -42,16 +42,21 @@ for i in range(len(df)):
     ls.insert(13, mu_delta_rhopmrade2[1])
     ls.insert(14, mu_delta_rhopmrade2[2])
 
+    r_peri = ls[27].split(" ")
+    r_peri2 = [ele for ele in r_peri if ele != '']
+    #print(r_peri)
+    ls.pop(27)
+    ls.insert(27, r_peri2[0])
+    ls.insert(28, r_peri2[1])
+
+    r_apo = ls[29].split(" ")
+    r_apo2 = [ele for ele in r_apo if ele != '']
+    ls.pop(29)
+    ls.insert(29, r_apo2[0])
+    ls.insert(30, r_apo2[1])
+
     with open('timestamp_refined.csv', 'a') as f_object:
-
         writer_object = writer(f_object)
-
         writer_object.writerow(ls)
-
         f_object.close()
 
-
-
-
-
-#12
