@@ -15,7 +15,7 @@ for header in df:
 print(len(df))
 print(headers)
 print("------------------------")
-for i in range(10):
+for i in range(len(df)):
     ls = []
     for header in headers:
         elements = df[header]
