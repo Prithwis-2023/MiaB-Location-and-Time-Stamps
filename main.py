@@ -35,25 +35,23 @@ for i in range(len(df)):
     ls.insert(10, mualpha2[0])
     ls.insert(11, mualpha2[1])
 
+    mu_delta_rhopmrade = ls[12].split(" ")
+    mu_delta_rhopmrade2 = [ele for ele in mu_delta_rhopmrade if ele != '']
+    ls.pop(12)
+    ls.insert(12, mu_delta_rhopmrade2[0])
+    ls.insert(13, mu_delta_rhopmrade2[1])
+    ls.insert(14, mu_delta_rhopmrade2[2])
+
     with open('timestamp_refined.csv', 'a') as f_object:
- 
-        # Pass this file object to csv.writer()
-        # and get a writer object
+
         writer_object = writer(f_object)
 
-        # Pass the list as an argument into
-        # the writerow()
         writer_object.writerow(ls)
 
-        # Close the file object
         f_object.close()
 
 
 
-'''
-for elements in df["Rsun  ERsun"]:
-    ls = []
-    elements = str(elements).split('  ')
-    RSun = elements[0]
-    ERsun = elements[1]
-'''    
+
+
+#12
