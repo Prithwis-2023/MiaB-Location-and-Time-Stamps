@@ -29,8 +29,8 @@ for i in range(len(df)):
     rgc_with_rv = ls[7].split(" ")
     rgc_with_rv2 = [ele for ele in rgc_with_rv if ele != '']
     ls.pop(7)
-    ls.insert(7, rgc_with_rv[0])
-    ls.insert(8, rgc_with_rv[1])
+    ls.insert(7, rgc_with_rv2[0])
+    ls.insert(8, rgc_with_rv2[1])
     
     #print(ls)
     #print(len(ls))
