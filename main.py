@@ -21,18 +21,20 @@ for i in range(len(df)):
         elements = df[header]
         ls.append(elements[i])
     
-    rsun_with_error = ls[5].split("   ")
-    #rgc_with_rv = ls[6].split(" ")
-    #delta_with_rho = ls[9].split("  ")
+    rsun_with_error = ls[5].split("   ")    
     ls.pop(5)
-    #ls.pop(6)
-    #ls.pop(9)
     ls.insert(5, rsun_with_error[0])
     ls.insert(6, rsun_with_error[1])
-    #ls.insert(7, rgc_with_rv[0])
-    #ls.insert(8, rgc_with_rv[1])
-    #ls.insert(10, delta_with_rho[0])
-    #s.insert(11, delta_with_rho[1])
+    
+    rgc_with_rv = ls[7].split(" ")
+    for ele in rgc_with_rv:
+        if ele == " ":
+            rgc_with_rv.remove(ele)
+            
+    ls.pop(7)
+    ls.insert(7, rgc_with_rv[0])
+    ls.insert(8, rgc_with_rv[1])
+    
     #print(ls)
     #print(len(ls))
     #print("-----------------------")
