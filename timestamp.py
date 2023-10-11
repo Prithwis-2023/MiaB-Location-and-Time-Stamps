@@ -4,9 +4,10 @@ from astropy import units as u
 from astropy import constants as const
 import pandas as pd
 from csv import writer
+import math
+from math import *
 
 df = pd.read_csv("timestamp.csv")
-#df1 = pd.read_csv("timestamp_refined.csv")
 
 headers = []
 for header in df:
@@ -44,7 +45,6 @@ for i in range(len(df)):
 
     r_peri = ls[27].split(" ")
     r_peri2 = [ele for ele in r_peri if ele != '']
-    #print(r_peri)
     ls.pop(27)
     ls.insert(27, r_peri2[0])
     ls.insert(28, r_peri2[1])
@@ -54,6 +54,11 @@ for i in range(len(df)):
     ls.pop(29)
     ls.insert(29, r_apo2[0])
     ls.insert(30, r_apo2[1])
+
+    v = math.sqrt(float(ls[21])**2 + float(ls[23])**2 + float(ls[25])**2)
+
+    ls.insert(31, v)
+    ls.insert(32, "-")
 
     with open('timestamp_refined.csv', 'a') as f_object:
         writer_object = writer(f_object)
