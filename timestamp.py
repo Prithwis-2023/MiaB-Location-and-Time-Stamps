@@ -56,9 +56,9 @@ for i in range(len(df)):
     ls.insert(30, r_apo2[1])
 
     v = math.sqrt(float(ls[21])**2 + float(ls[23])**2 + float(ls[25])**2)
-
+    e_v = math.sqrt(((float(ls[21]) / v) * float(ls[22]))**2 + ((float(ls[23]) / v) * float(ls[24]))**2 + ((float(ls[25]) / v) * float(ls[26]))**2)
     ls.insert(31, v)
-    ls.insert(32, "-")
+    ls.insert(32, e_v)
 
     with open('timestamp_refined.csv', 'a') as f_object:
         writer_object = writer(f_object)
