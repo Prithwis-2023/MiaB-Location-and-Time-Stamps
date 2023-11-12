@@ -52,9 +52,6 @@ plt.legend()
 plt.savefig('3d-map.png', dpi = 1000)
 plt.show()
 
-
-
-
 '''
 # points for Sun to 47 Tuc
 z_tuc = np.linspace(0, -4.5, num=1000)
