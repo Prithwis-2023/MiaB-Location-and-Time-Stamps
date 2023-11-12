@@ -51,38 +51,3 @@ ax.set_zlabel('Z-Axis', c=color)
 plt.legend()
 plt.savefig('3d-map.png', dpi = 1000)
 plt.show()
-
-'''
-# points for Sun to 47 Tuc
-z_tuc = np.linspace(0, -4.5, num=1000)
-x_tuc = np.repeat(0, 1000)
-y_tuc = -0.99616762856204204472570620423053*z_tuc #for B (galactic latitude)
-x_tuc = -1.3819535514372218087543204143034*y_tuc  #for L (galactic longitude)
-
-#points for Sun to NGC 5139
-z_5139 = np.linspace(0, 5.2, num=1000)
-x_5139 = np.repeat(0, 1000)
-y_5139 = 0.26738807962645813747654902490062*z_5139 #for B
-x_5139 = -1.2304997241409141008745933370653*y_5139 #for L
-
-#points for Sun to NGC 6441
-z_6441 = np.linspace(0, -3.9, num=1000)
-x_6441 = np.repeat(0, 1000)
-y_6441 = -0.08766453505988449896723384277002*z_6441 #for B
-x_6441 = -0.11340524411253067779382016726172*y_6441 #for L
-
-#points for Sun to NGC 6440
-z_6440 = np.linspace(0, 8.5, num=1000)
-x_6440 = np.repeat(0, 1000)
-y_6440 = 0.06641992671492261406308785655555*z_6440
-x_6440 = 0.13573851285372289876320167761943*y_6440
-
-
-
-# plot
-ax.plot(x_galc, y_galc, z_galc, label=r'Sun to Gal. Center')
-ax.plot(x_tuc, y_tuc, z_tuc, label=r'Sun to 47 Tucanae')
-ax.plot(x_5139, y_5139, z_5139, label=r'Sun to NGC 5139')
-ax.plot(x_6441, y_6441, z_6441, label=r'Sun to NGC 6441')
-ax.plot(x_6440, y_6440, z_6440, label=r'Sun to NGC 6440')
-'''
