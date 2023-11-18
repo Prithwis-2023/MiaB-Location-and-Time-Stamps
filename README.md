@@ -7,7 +7,7 @@ This repository comprises of the code that has been implemented for the creation
 - **Publication:** https://doi.org/10.48550/arXiv.2306.01765
 - **Correspondence:** jonathan.h.jiang@jpl.nasa.gov
 
-![MIAB_Location_Map2 (2)](https://user-images.githubusercontent.com/72024767/227727692-d02e11c9-f1ab-4bc5-9dd6-e7e16d526d0b.png)
+![image](https://github.com/Prithwis-2023/MiaB-Location-and-Time-Stamps/assets/72024767/0e544827-355a-4827-a977-75428a4ae705)
 
 -------------------------------------------------------------------------------------------------------------------------------------
 <p align="center">
