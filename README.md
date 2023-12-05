@@ -4,7 +4,7 @@ This repository comprises of the code that has been implemented for the creation
 
 - **Authors:**
  Jonathan H Jiang, Anamaria Berea, Heather Bowden, Prithwis Das, Kristen Fahy, Joseph Ginsberg, Robert Jew, Xiaoming Jiang, Arik Kershenbaum, David Kipping, Graham Lau, Karen Lewis, C. Isabel Nunez Lendo, Philip E. Rosen, Nick Searra, Stuart F Taylor, John Traphagan.
-- **Publication:** https://doi.org/10.48550/arXiv.2306.01765
+- **Publication:** https://doi.org/10.1029/2023EA003042
 - **Correspondence:** jonathan.h.jiang@jpl.nasa.gov
 
 ![image](https://github.com/Prithwis-2023/MiaB-Location-and-Time-Stamps/assets/72024767/0e544827-355a-4827-a977-75428a4ae705)
